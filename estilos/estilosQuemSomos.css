@@ -1,0 +1,161 @@
+   			*{
+				margin: 0px;
+			}
+			html,body{
+				height: 100%;
+			}
+			body{
+				box-sizing: border-box;
+			}
+
+			.divConteudo{
+			    margin: 0%; 
+			    background-color: white;
+			}
+
+			@media screen and (min-width: 636px){
+			    .divConteudo{
+			        margin: 1% 12.5%; 
+			
+			    }
+			}
+
+			
+			.aluno{
+				display:grid;
+				grid-template-columns:minmax(0, 1fr) minmax(auto, 2fr);
+				-webkit-align-content:center;
+				-ms-flex-line-pack:center;align-content:center;
+				-webkit-box-align:center;-webkit-align-items:center;
+				-ms-flex-align:center;
+				align-items:center;
+				background:#ff9977;
+				;color:black;
+				padding:2rem;
+				margin:0 0 2rem 0;
+			}
+			.aluno .nome-titulo{
+				display:grid;
+				-webkit-align-content:center;
+				-ms-flex-line-pack:center;
+				align-content:center;
+				-webkit-box-pack:start;
+				-webkit-justify-content:start;
+				-ms-flex-pack:start;
+				justify-content:start;
+				font-family: lemon2;
+			}
+			.aluno img{
+				display:block;
+				margin:0 0 0 -2.5rem;
+				-webkit-filter:grayscale(100%) brightness(125%);
+				filter:grayscale(100%) brightness(125%);
+				border:5px solid #2d303a;
+				-webkit-transition:0.2s;
+				transition:0.2s;
+				-webkit-transform:rotate(-10deg);
+				transform:rotate(-10deg);
+				width:130px;
+				min-width:100px;
+			}
+			.aluno h2{
+				font-size:3rem;
+				font-style:normal;line-height:0.9
+			}
+			.aluno h2,.aluno .ocupacao{
+				padding:1rem;
+				margin:0;
+				position: static;
+			}
+			.aluno .ocupacao{
+				padding-top:0;
+				text-transform:uppercase;
+				-webkit-font-smoothing:antialiased;
+				-moz-osx-font-smoothing:grayscale;
+				font-family:'Telefon Black', Sans-Serif;
+				font-size: 120%;
+			}
+			.aluno .biografia{
+				grid-column:1 / 3;
+				margin-top:1rem;
+				font-size: 110%;
+			}
+			.aluno p{
+				margin:0.5rem 0
+			}
+			.aluno a{
+				color:inherit;
+				border-bottom:1px solid;
+			}
+			.aluno:hover img{
+				-webkit-transform:rotate(-8deg);
+				transform:rotate(-8deg);
+				-webkit-filter:grayscale(0%) brightness(100%);
+				filter:grayscale(0%) brightness(100%);
+				}
+
+			@media (min-width: 770px){
+				.aluno img{max-width:120%;
+					width:175px;
+				}
+			}
+
+			.mars {
+				color: white;
+				text-align: center;
+				font-family: lemon2;
+			    font-size: 110%;
+			    font-weight: bold;
+			    color: black;
+			    margin-top: 2%;
+			    margin-bottom: 5%;
+			    letter-spacing: 2px;
+			}
+
+.divTitulo{
+	height: 10%;
+	padding: 2% 0%;
+	background-color: #C3171B; 
+	font-size: 130%;
+}
+
+.divTitulo h2{
+	background-color: #C3171B; 
+	color: white;
+	font-family: lemon2;
+	text-align: center;
+}
+
+.divTitulo h2:hover{
+	letter-spacing: 15px;
+}
+
+.marginTop{
+	margin-top: 6%;
+}
+
+@media screen and (max-width: 500px){
+	.aluno .nome-titulo{
+				display:grid;
+				-webkit-align-content:center;
+				-ms-flex-line-pack:center;
+				align-content:center;
+				-webkit-box-pack:start;
+				-webkit-justify-content:start;
+				-ms-flex-pack:start;
+				justify-content:start;
+				font-family: lemon2;
+				font-size: 80%;
+				margin-left: 27%;
+			}
+	.nome-titulo h2{
+		font-size: 200%;
+	}
+
+	.divMissao h3{
+		font-size: 90%;
+	}
+	.mars{
+		font-size: 90%;
+	}
+}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="icon" type="imagem/png" href="imagens/logoInteiro.png">
+			
+			<title>MARS Code Lesson</title>
+		
+		<link rel="stylesheet" type="text/css" href="estilos/fontes.css">
+		<link rel="stylesheet" type="text/css" href="estilos/banner.css">
+		<link rel="stylesheet" type="text/css" href="estilos/nav.css">
+		<link rel="stylesheet" type="text/css" href="estilos/conteudo.css">
+		<link rel="stylesheet" type="text/css" href="estilos/footer.css">
+		<link rel="stylesheet" type="text/css" href="estilos/responsividade.css">
+		<link rel="stylesheet" type="text/css" href="estilos/formulario.css">
+		<style>
+			*{
+				margin: 0px;
+			}
+			html,body{
+				height: 100%;
+			}
+			body{
+				box-sizing: border-box;
+			}
+		</style>
+		<script>
+			NUMERO_QUESTOES = 10;
+	
+			function armazenarResposta() {
+				if (typeof(Storage) !== "undefined") {
+					localStorage.setItem("nroQuestoes",NUMERO_QUESTOES.toString())
+					for (j=0; j<NUMERO_QUESTOES; j++){
+						questao = document.getElementsByName("questao"+(j+1));
+						for (i=0; i<questao.length; i++)
+							if (questao[i].checked) {
+								localStorage.setItem("questao"+(j+1),(i+1).toString())
+								break
+							}
+					}
+					window.open("corrigirQuestoesSistemasOperacionais.html","_self");
+				} else alert("Seu navegador é muito antigo para utilizar esse recurso")
+			}
+		</script>
+	</head>
+	<body>
+		
+		<!-- Grupo do banner------------------------------------------------------------>
+		<div class="linkHome"></div>
+		<div class="banner col-dm-12 col-dg-12">
+			<div class="divFundoBanner">				
+					<img src="imagens/logo.png" class="imagemLogo">
+					<img src="imagens/logoInteiro.png" class="imagemLogoInteiro">				
+			</div>
+		</div>
+		<a href="index.html"><img src="imagens/logoTransparente.png" class="linkHome"></a>
+		<!------------------------------------------------------------------------------>
+		
+		<!-- Grupo do nav--------------------------------------------------------------->
+		<div class="divNav">
+		
+				<input type="checkbox" value="" id="check" checked="false" />
+		  		
+		  		<div class="imagemMenuHam">
+		  			<label id="icone" for="check">
+		  				<img src="imagens/iconeHam.png" width="10%" height="10%">
+		  			</label>
+		  		</div>
+						
+			<nav class="menu">
+
+				<ul>
+
+			  		<li class="paddingExclusivo"><a href="#">HOME</a>		  		
+				  		<ul>
+				  			<li><a href="index.html#link1">Quem é a Mars?</a></li>
+				  			<li><a href="index.html#link2">Realidade dos EAD's</a></li>			
+				  			<li><a href="index.html#link3">Ter um curso agrega?</a></li>   			
+				  		</ul>		  		 		
+			  		</li>
+				  		
+			  		<li><a href="#">CURSOS</a>
+				  		
+				  		<ul>
+				  			<li><a href="arquitetura.html">Arquitetura Computadores</a></li>				  			
+				  			<li><a href="fundamentos.html">Fundamentos Web Design</a></li>
+				  			<li><a href="ingles.html">Inglês Instrumental</a></li>
+				  			<li><a href="logica.html">Lógica De Programação</a></li>
+				  			<li><a href="metodologia.html">Metodologia Científica</a></li>
+				  			<li><a href="sistemas.html">Sistemas Operacionais</a></li>	  			
+				  		</ul>
+			  		</li>	  		
+				  		
+			  		<li><a href="#">CONTATOS</a>
+				  		<ul>
+				  			<li><a href="contatos.html">Contatos</a></li>	  			
+				  		</ul>
+			  		</li>
+			  		
+			  		<li><a href="#">SOBRE NÓS</a>
+						<ul>
+				  			<li><a href="quemSomos.html">Quem somos?</a></li>
+				  			<li><a href="quemSomos.html#missao">Qual é a nossa missão?</a></li>	  			
+				  		</ul>
+			  		</li>
+
+			  	</ul>
+			</nav>
+		</div>
+		<!------------------------------------------------------------------------------>
+
+		<!-- Grupo do conteudo---------------------------------------------------------->
+		<section>
+			<div class="linha">
+				<div class="col-dm-12 col-dg-12">
+					<h2 class="tituloFormulario" style="color:white; background-color:#fff20a">Sistemas Operacionais</h2>
+				</div>
+			</div>
+			<div class="linha">
+				<div class="col-dm-2 col-dg-2"></div>
+				<div class="col-dm-8 col-dg-8">
+					<p>Responda com 60% de acerto para gerar seu certificado.</p><br>
+					<form action="">
+						<p>1 - O que é o Linux?</p><br>
+						<label><input type="radio" name="questao1">É um sistema operacional desenvolvido, comercializado e vendido pela Microsoft.</label><br>
+						<label><input type="radio" name="questao1">É um sistema operacional desenvolvido, comercializado e vendido pela Apple.</label><br>
+						<label><input type="radio" name="questao1">É um sistema operacional de código aberto.</label><br>
+						<br><br>
+						<p>2 - Por que o linux tem tantos nomes??</p><br>
+						<label><input type="radio" name="questao2">Porque o linux é um sistema de código aberto e qualquer pessoa ou organização pode compilar sua própria versão.</label><br>
+						<label><input type="radio" name="questao2">Porque o linux é um sistema de código fechado.</label><br>
+						<label><input type="radio" name="questao2">Porque o linux é um sistema de drivers desenvolvido por vários usuários.</label><br>
+						<br><br>
+						<p>3 - Por que o Ubuntu é tão popular?</p><br>
+						<label><input type="radio" name="questao3">Porque é uma distribuição paga que teve muita propaganda para seu sucesso.</label><br>
+						<label><input type="radio" name="questao3">Porque supre perfeitamente as necessidades de usuários comuns, que usam o PC apenas para navegar, fazer trabalho e acessar redes sociais.</label><br>
+						<label><input type="radio" name="questao3">Porque é uma distribuição sem interface gráfica focada para servidor.</label><br>
+						<br><br>
+						<p>4 - Quais são as vantagens de se usar o openSUSE?</p><br>
+						<label><input type="radio" name="questao4">É a distribuição mais segura recomendada.</label><br>
+						<label><input type="radio" name="questao4">É a distribuição mais leve, permitindo que você defina apenas o que pretende instalar.</label><br>
+						<label><input type="radio" name="questao4">É perfeito como sistema operacional de desktop, mas também para suas necessidades de servidor.</label><br>
+						<br><br>
+						<p>5 - Por que o Kali Linux é tão seguro?</p><br>
+						<label><input type="radio" name="questao5">Porque foi projetada com um antivírus imbutido.</label><br>
+						<label><input type="radio" name="questao5">Porque foi projetada tendo em mente testes de penetração, recuperação de dados e detecção de ameaças.</label><br>
+						<label><input type="radio" name="questao5">Porque não há necessidade de se preocupar com invasões.</label><br>
+						<br><br>
+						<p>6 - O que é o Virtual Box?</p><br>
+						<label><input type="radio" name="questao6">Um hardware para instalar sistemas operacionais.</label><br>
+						<label><input type="radio" name="questao6">Um software para emular sistemas operacionais.</label><br>
+						<label><input type="radio" name="questao6">Um software para instalar programas.</label><br>
+						<br><br>
+						<p>7 - Qual o tamanho de memória RAM indicado para o Windows 7?</p><br>
+						<label><input type="radio" name="questao7">1 gigabyte.</label><br>
+						<label><input type="radio" name="questao7">2 gigabyte.</label><br>
+						<label><input type="radio" name="questao7">4 gigabyte.</label><br>
+						<br><br>
+						<p>8 - Qual a quantidade recomendada de núcleos de processadores para sua máquina virtual?</p><br>
+						<label><input type="radio" name="questao8">Todos núcleos disponíveis.</label><br>
+						<label><input type="radio" name="questao8">Nenhum.</label><br>
+						<label><input type="radio" name="questao8">Metade dos núcleos disponíveis.</label><br>
+						<br><br>
+						<p>9 - Aonde colocar a iso do Windows 7?</p><br>
+						<label><input type="radio" name="questao9">No lugar do “Windows 7.vdi”.</label><br>
+						<label><input type="radio" name="questao9">No disco vazio da “Controladora: SATA”.</label><br>
+						<label><input type="radio" name="questao9">Nas Configurações do Sistema.</label><br>
+						<br><br>
+						<p>10 - Qual o método de entrada recomendado para o teclado?</p><br>
+						<label><input type="radio" name="questao10">PT-BR.</label><br>
+						<label><input type="radio" name="questao10">ABTN.</label><br>
+						<label><input type="radio" name="questao10">ABTN2.</label><br>
+						
+						<br><input type="button" value="Conferir" onclick="armazenarResposta()">
+						<input type="reset" value="Limpar">
+					</form>
+				</div>
+				<div class="col-dm-2 col-dg-2"></div>
+			</div>
+		</section>
+		<!-- Grupo do footer------------------------------------------------------------>
+		<footer>
+			<div class="linha">
+				<div class="col-dm-4 col-dg-4 youtube">
+					<h3>Aonde estamos</h3>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1886.983476991275!2d-48.28086364898106!3d-18.932856802403823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a444e28f2d7a11%3A0x8fa16020966235f9!2sIFTM+Campus+Uberl%C3%A2ndia+Centro!5e0!3m2!1spt-BR!2sbr!4v1562459259135!5m2!1spt-BR!2sbr" width="200" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+				<div class="col-dm-4 col-dg-4">
+					<h3>Entre em contato</h3>
+					<div class="linha links">
+						<div class="linha">
+							<div class="col-dm-2 col-dg-2"></div>
+							<div class="col-dm-2 col-dg-2 imagemContato"><img src="imagens/facebook.png" alt="" width="40px"></div>
+							<div class="col-dm-8 col-dg-8" id="links"><a href="#">Facebook</a></div>
+						</div>
+						<div class="linha">
+							<div class="col-dm-2 col-dg-2"></div>
+							<div class="col-dm-2 col-dg-2 imagemContato"><img src="imagens/linkedin.png" alt="" width="40px"></div>
+							<div class="col-dm-8 col-dg-8" id="links"><a href="#">Linkedin</a></div>
+						</div>
+						<div class="linha">
+							<div class="col-dm-2 col-dg-2"></div>
+							<div class="col-dm-2 col-dg-2 imagemContato"><img src="imagens/whatsapp.png" alt="" width="40px"></div>
+							<div class="col-dm-8 col-dg-8" id="links"><a href="#">Whatsapp</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-dm-4 col-dg-4">
+					<h3 class="youtube">Inscreva-se</h3>
+					<script src="https://apis.google.com/js/platform.js"></script>
+					<div class="g-ytsubscribe" data-channelid="UCa61FXMYKD6OjYBJ2Zo3tQQ" data-layout="full" data-theme="dark" data-count="hidden"></div>
+				</div>
+				<div class="col-dm-12 col-dg-12 direitos">
+					<p>Todos os direitos reservados.</p>
+				</div>
+			</div>
+		</footer>
+		<!------------------------------------------------------------------------------>
+	</body>
+</html>

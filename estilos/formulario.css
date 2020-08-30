@@ -1,0 +1,19 @@
+section .linha {
+    font-family: Lemon2;
+}
+
+section h2 {
+    text-align: center;
+}
+
+section div {
+    padding: 1px;
+    margin: 0px;
+}
+
+.tituloFormulario {
+    height: 10%;
+    display: block;
+    padding: 2% 0%;
+    font-size: 150%;
+}

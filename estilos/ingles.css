@@ -1,0 +1,218 @@
+	.divConteudo{
+		margin: 0%;
+	}
+
+	.divArticle{
+		width: 100%;
+		position: static;
+	}
+
+	.divArticle .divTitulo{
+		height: 10%;
+		display: block;
+		padding: 2% 0%;
+		background-color: #a741c6; 
+		font-size: 150%;
+	}
+
+	.divArticle .divTitulo h2{
+		background-color: #a741c6; 
+		color: white;
+		font-family: lemon2;
+		text-align: center;
+	}
+
+	.divArticle .divTitulo h2:hover{
+		letter-spacing: 15px;
+	}
+
+	.divArticle .divTexto{
+
+	}
+
+	.divArticle .divTexto p{
+		padding: 4% 5%;
+		font-family: lemon2;
+		text-align: justify;
+	}
+
+
+
+	.divVideos{
+		width: 100%;	
+		text-align: center;
+		display:inline-block;
+		position: static;
+		margin-bottom: 1%;		
+	}
+
+	.videoSolo{
+		width: 90%;
+		height:300px;
+		float: left;
+		display: inline-block;
+		position: relative;
+		margin-top: 5%;
+		margin-left: 5%;
+	}
+
+	.videoSolo span{
+		color: #a741c6;
+		font-family: lemon2;
+		font-size: 130%;
+	}
+
+	.videoSolo iframe{
+		width: 100%;
+		height: 93%;
+		text-align: center;
+		display: block;
+	}
+
+	.divVideos .divTitulo{
+		height: 10%;
+		display: block;
+		background-color: #a741c6; 
+		font-size: 110%;
+	}
+
+	.divVideos .divTitulo h2{
+		background-color: #a741c6; 
+		color: white;
+		font-family: lemon2;
+		text-align: center;
+		padding: 2% 0% 2% 0%;
+	}
+
+	.divVideos .divTitulo h2:hover{
+		letter-spacing: 15px;
+	}
+
+	.divVideos .divTexto{
+
+	}
+
+	.divVideos .divTexto p{
+		padding: 4% 5%;
+		font-family: lemon2;
+		text-align: justify;
+	}
+
+	.divCertificado{
+		width: 50%;
+		margin-left: 25%;
+		margin-bottom: 5%;
+		margin-top: 5%;
+		background-color: red;
+		float: left;
+		display: inline-block;
+		position: relative;
+
+	}
+
+	.divCertificado a span{
+		display: block;
+		position: relative;
+		color: white;
+		margin: 10px;
+		font-family: lemon2;
+		text-decoration: underline red;
+	}
+
+@media screen and (min-width: 636px){
+		.divVideos{
+		width: 100%;	
+		text-align: center;
+		display:inline-block;
+		position: static;	
+	}
+
+	.videoSolo{
+		width: 45.5%;
+		height:400px;
+		float: left;
+		display: inline-block;
+		position: relative;
+		margin-left: 3%;
+		margin-top: 1%;
+		margin-bottom: 1%;
+	}
+
+	.videoSolo span{
+	color: #a741c6;
+	font-family: lemon2;
+	font-size: 130%;
+	}
+
+	.videoSolo iframe{
+		width: 100%;
+		height: 93%;
+		text-align: center;
+		display: block;
+		border:2px solid black;
+	}
+
+	.divVideos .divTitulo{
+		width: 94%;
+		height: 10%;
+		margin-left: 3%;
+		display: block;
+		background-color: #a741c6; 
+		font-size: 110%;
+	}
+
+	.divVideos .divTitulo h2{
+		background-color: #a741c6; 
+		color: white;
+		font-family: lemon2;
+		text-align: center;
+		padding: 2% 0% 2% 0%;
+	}
+
+	.divVideos .divTitulo h2:hover{
+		letter-spacing: 15px;
+	}
+
+	.divVideos .divTexto{
+
+	}
+
+	.divVideos .divTexto p{
+		padding: 4% 5%;
+		font-family: lemon2;
+		text-align: justify;
+	}
+
+	.divCertificado{
+		width: 20%;
+		margin-left: 40%;
+		margin-bottom: 5%;
+		background-color: red;
+		float: left;
+		display: inline-block;
+		position: relative;
+
+	}
+
+	.divCertificado a span{
+		display: block;
+		position: relative;
+		color: white;
+		margin: 10px;
+		font-family: lemon2;
+		text-decoration: underline red;
+	}
+
+}
+
+@media screen and (min-width: 1300px){
+	.divTexto p{
+		font-size: 140%;
+	}
+}
+
+	.divCertificado:active{
+		transition: all 0.3s;
+		background-color: #ad0000;
+		box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	}

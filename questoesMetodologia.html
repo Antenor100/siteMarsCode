@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="icon" type="imagem/png" href="imagens/logoInteiro.png">
+			
+			<title>MARS Code Lesson</title>
+		
+		<link rel="stylesheet" type="text/css" href="estilos/fontes.css">
+		<link rel="stylesheet" type="text/css" href="estilos/banner.css">
+		<link rel="stylesheet" type="text/css" href="estilos/nav.css">
+		<link rel="stylesheet" type="text/css" href="estilos/conteudo.css">
+		<link rel="stylesheet" type="text/css" href="estilos/footer.css">
+		<link rel="stylesheet" type="text/css" href="estilos/responsividade.css">
+		<link rel="stylesheet" type="text/css" href="estilos/formulario.css">
+		<style>
+			*{
+				margin: 0px;
+			}
+			html,body{
+				height: 100%;
+			}
+			body{
+				box-sizing: border-box;
+			}
+		</style>
+		<script>
+			NUMERO_QUESTOES = 10;
+	
+			function armazenarResposta() {
+				if (typeof(Storage) !== "undefined") {
+					localStorage.setItem("nroQuestoes",NUMERO_QUESTOES.toString())
+					for (j=0; j<NUMERO_QUESTOES; j++){
+						questao = document.getElementsByName("questao"+(j+1));
+						for (i=0; i<questao.length; i++)
+							if (questao[i].checked) {
+								localStorage.setItem("questao"+(j+1),(i+1).toString())
+								break
+							}
+					}
+					window.open("corrigirQuestoesMetodologia.html","_self");
+				} else alert("Seu navegador é muito antigo para utilizar esse recurso")
+			}
+		</script>
+	</head>
+	<body>
+		
+		<!-- Grupo do banner------------------------------------------------------------>
+		<div class="linkHome"></div>
+		<div class="banner col-dm-12 col-dg-12">
+			<div class="divFundoBanner">				
+					<img src="imagens/logo.png" class="imagemLogo">
+					<img src="imagens/logoInteiro.png" class="imagemLogoInteiro">				
+			</div>
+		</div>
+		<a href="index.html"><img src="imagens/logoTransparente.png" class="linkHome"></a>
+		<!------------------------------------------------------------------------------>
+		
+		<!-- Grupo do nav--------------------------------------------------------------->
+		<div class="divNav">
+		
+				<input type="checkbox" value="" id="check" checked="false" />
+		  		
+		  		<div class="imagemMenuHam">
+		  			<label id="icone" for="check">
+		  				<img src="imagens/iconeHam.png" width="10%" height="10%">
+		  			</label>
+		  		</div>
+						
+			<nav class="menu">
+
+				<ul>
+
+			  		<li class="paddingExclusivo"><a href="#">HOME</a>		  		
+				  		<ul>
+				  			<li><a href="index.html#link1">Quem é a Mars?</a></li>
+				  			<li><a href="index.html#link2">Realidade dos EAD's</a></li>			
+				  			<li><a href="index.html#link3">Ter um curso agrega?</a></li>   			
+				  		</ul>		  		 		
+			  		</li>
+				  		
+			  		<li><a href="#">CURSOS</a>
+				  		
+				  		<ul>
+				  			<li><a href="arquitetura.html">Arquitetura Computadores</a></li>				  			
+				  			<li><a href="fundamentos.html">Fundamentos Web Design</a></li>
+				  			<li><a href="ingles.html">Inglês Instrumental</a></li>
+				  			<li><a href="logica.html">Lógica De Programação</a></li>
+				  			<li><a href="metodologia.html">Metodologia Científica</a></li>
+				  			<li><a href="sistemas.html">Sistemas Operacionais</a></li>	  			
+				  		</ul>
+			  		</li>	  		
+				  		
+			  		<li><a href="#">CONTATOS</a>
+				  		<ul>
+				  			<li><a href="contatos.html">Contatos</a></li>	  			
+				  		</ul>
+			  		</li>
+			  		
+			  		<li><a href="#">SOBRE NÓS</a>
+						<ul>
+				  			<li><a href="quemSomos.html">Quem somos?</a></li>
+				  			<li><a href="quemSomos.html#missao">Qual é a nossa missão?</a></li>	  			
+				  		</ul>
+			  		</li>
+
+			  	</ul>
+			</nav>
+		</div>
+		<!------------------------------------------------------------------------------>
+
+		<!-- Grupo do conteudo---------------------------------------------------------->
+		<section>
+			<div class="linha">
+				<div class="col-dm-12 col-dg-12">
+					<h2 class="tituloFormulario" style="color:white; background-color:#fc8200">Metodologia Científica</h2>
+				</div>
+			</div>
+			<div class="linha">
+				<div class="col-dm-2 col-dg-2"></div>
+				<div class="col-dm-8 col-dg-8">
+					<p>Responda com 60% de acerto para gerar seu certificado.</p><br>
+					<form action="">
+						<p>1 - O que é pesquisa?</p><br>
+						<label><input type="radio" name="questao1">Uma investigação para novos conhecimentos.</label><br>
+						<label><input type="radio" name="questao1">Afirmação de uma hipótese.</label><br>
+						<label><input type="radio" name="questao1">Uma analise do passado.</label><br>
+						<label><input type="radio" name="questao1">Uma revisão do presente.</label><br>
+						<br><br>
+						<p>2 - Qual método de pesquisa utiliza pesquisa de campo e laboratório?</p><br>
+						<label><input type="radio" name="questao2">Indireta.</label><br>
+						<label><input type="radio" name="questao2">Histórico.</label><br>
+						<label><input type="radio" name="questao2">Direta.</label><br>
+						<label><input type="radio" name="questao2">Experimental.</label><br>
+						<br><br>
+						<p>3 - Como é feito o levantamento de dados na pesquisa indireta?</p><br>
+						<label><input type="radio" name="questao3">Campo.</label><br>
+						<label><input type="radio" name="questao3">Laboratório.</label><br>
+						<label><input type="radio" name="questao3">Experimental.</label><br>
+						<label><input type="radio" name="questao3">Documental.</label><br>
+						<br><br>
+						<p>4 - Qual pesquisa utiliza o conceito de tentativa e erro?</p><br>
+						<label><input type="radio" name="questao4">Experimental.</label><br>
+						<label><input type="radio" name="questao4">Histórico.</label><br>
+						<label><input type="radio" name="questao4">Indireta.</label><br>
+						<label><input type="radio" name="questao4">Direta.</label><br>
+						<br><br>
+						<p>5 - Onde é feito a maioria das pesquisas experimentais?</p><br>
+						<label><input type="radio" name="questao5">Jornais.</label><br>
+						<label><input type="radio" name="questao5">Laboratório.</label><br>
+						<label><input type="radio" name="questao5">Internet.</label><br>
+						<label><input type="radio" name="questao5">Campo.</label><br>
+						<br><br>
+						<p>6 - Qual método investiga eventos do passado?</p><br>
+						<label><input type="radio" name="questao6">Correlacional.</label><br>
+						<label><input type="radio" name="questao6">Casual.</label><br>
+						<label><input type="radio" name="questao6">Histórico.</label><br>
+						<label><input type="radio" name="questao6">Descritivo.</label><br>
+						<br><br>
+						<p>7 - Seu objetivo é descrever um fenômeno ou população:</p><br>
+						<label><input type="radio" name="questao7">Método histórico.</label><br>
+						<label><input type="radio" name="questao7">Método correlacional.</label><br>
+						<label><input type="radio" name="questao7">Método casual comparativo.</label><br>
+						<label><input type="radio" name="questao7">Método descritivo.</label><br>
+						<br><br>
+						<p>8 - Qual pesquisa procura explorar relações que possam existir entre variáveis?</p><br>
+						<label><input type="radio" name="questao8">Descritivo.</label><br>
+						<label><input type="radio" name="questao8">Correlacional.</label><br>
+						<label><input type="radio" name="questao8">Comparativo.</label><br>
+						<label><input type="radio" name="questao8">Histórico.</label><br>
+						<br><br>
+						<p>9 - Qual pesquisa compara duas variáveis entre si para chegar em uma conclusão?</p><br>
+						<label><input type="radio" name="questao9">Casual comparativo.</label><br>
+						<label><input type="radio" name="questao9">Descritivo.</label><br>
+						<label><input type="radio" name="questao9">Histórico.</label><br>
+						<label><input type="radio" name="questao9">Correlacional.</label><br>
+						<br><br>
+						<p>10 - No exemplo a seguir "comparar dois grupos de alunos em uma sala de aula o primeiro grupo são os que trabalha e estuda e o segundo grupo os que não trabalha e estuda" qual método foi utilizado?</p><br>
+						<label><input type="radio" name="questao10">Histórico.</label><br>
+						<label><input type="radio" name="questao10">Correlacional.</label><br>
+						<label><input type="radio" name="questao10">Casual comparativo.</label><br>
+						<label><input type="radio" name="questao10">Descritivo.</label><br>
+						
+						<br><input type="button" value="Conferir" onclick="armazenarResposta()">
+						<input type="reset" value="Limpar">
+					</form>
+				</div>
+				<div class="col-dm-2 col-dg-2"></div>
+			</div>
+		</section>
+		<!-- Grupo do footer------------------------------------------------------------>
+		<footer>
+			<div class="linha">
+				<div class="col-dm-4 col-dg-4 youtube">
+					<h3>Aonde estamos</h3>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1886.983476991275!2d-48.28086364898106!3d-18.932856802403823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a444e28f2d7a11%3A0x8fa16020966235f9!2sIFTM+Campus+Uberl%C3%A2ndia+Centro!5e0!3m2!1spt-BR!2sbr!4v1562459259135!5m2!1spt-BR!2sbr" width="200" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+				<div class="col-dm-4 col-dg-4">
+					<h3>Entre em contato</h3>
+					<div class="linha links">
+						<div class="linha">
+							<div class="col-dm-2 col-dg-2"></div>
+							<div class="col-dm-2 col-dg-2 imagemContato"><img src="imagens/facebook.png" alt="" width="40px"></div>
+							<div class="col-dm-8 col-dg-8" id="links"><a href="#">Facebook</a></div>
+						</div>
+						<div class="linha">
+							<div class="col-dm-2 col-dg-2"></div>
+							<div class="col-dm-2 col-dg-2 imagemContato"><img src="imagens/linkedin.png" alt="" width="40px"></div>
+							<div class="col-dm-8 col-dg-8" id="links"><a href="#">Linkedin</a></div>
+						</div>
+						<div class="linha">
+							<div class="col-dm-2 col-dg-2"></div>
+							<div class="col-dm-2 col-dg-2 imagemContato"><img src="imagens/whatsapp.png" alt="" width="40px"></div>
+							<div class="col-dm-8 col-dg-8" id="links"><a href="#">Whatsapp</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-dm-4 col-dg-4">
+					<h3 class="youtube">Inscreva-se</h3>
+					<script src="https://apis.google.com/js/platform.js"></script>
+					<div class="g-ytsubscribe" data-channelid="UCa61FXMYKD6OjYBJ2Zo3tQQ" data-layout="full" data-theme="dark" data-count="hidden"></div>
+				</div>
+				<div class="col-dm-12 col-dg-12 direitos">
+					<p>Todos os direitos reservados.</p>
+				</div>
+			</div>
+		</footer>
+		<!------------------------------------------------------------------------------>
+	</body>
+</html>

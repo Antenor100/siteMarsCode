@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="icon" type="imagem/png" href="imagens/logoInteiro.png">
+			
+			<title>MARS Code Lesson</title>
+		
+		<link rel="stylesheet" type="text/css" href="estilos/fontes.css">
+		<link rel="stylesheet" type="text/css" href="estilos/banner.css">
+		<link rel="stylesheet" type="text/css" href="estilos/nav.css">
+		<link rel="stylesheet" type="text/css" href="estilos/conteudo.css">
+		<link rel="stylesheet" type="text/css" href="estilos/footer.css">
+		<link rel="stylesheet" type="text/css" href="estilos/responsividade.css">
+		<link rel="stylesheet" type="text/css" href="estilos/formulario.css">
+		<style>
+			*{
+				margin: 0px;
+			}
+			html,body{
+				height: 100%;
+			}
+			body{
+				box-sizing: border-box;
+			}
+		</style>
+		<script>
+			NUMERO_QUESTOES = 10;
+	
+			function armazenarResposta() {
+				if (typeof(Storage) !== "undefined") {
+					localStorage.setItem("nroQuestoes",NUMERO_QUESTOES.toString())
+					for (j=0; j<NUMERO_QUESTOES; j++){
+						questao = document.getElementsByName("questao"+(j+1));
+						for (i=0; i<questao.length; i++)
+							if (questao[i].checked) {
+								localStorage.setItem("questao"+(j+1),(i+1).toString())
+								break
+							}
+					}
+					window.open("corrigirQuestoesFundamentosWebDesign.html","_self");
+				} else alert("Seu navegador é muito antigo para utilizar esse recurso")
+			}
+		</script>
+	</head>
+	<body>
+		
+		<!-- Grupo do banner------------------------------------------------------------>
+		<div class="linkHome"></div>
+		<div class="banner col-dm-12 col-dg-12">
+			<div class="divFundoBanner">				
+					<img src="imagens/logo.png" class="imagemLogo">
+					<img src="imagens/logoInteiro.png" class="imagemLogoInteiro">				
+			</div>
+		</div>
+		<a href="index.html"><img src="imagens/logoTransparente.png" class="linkHome"></a>
+		<!------------------------------------------------------------------------------>
+		
+		<!-- Grupo do nav--------------------------------------------------------------->
+		<div class="divNav">
+		
+				<input type="checkbox" value="" id="check" checked="false" />
+		  		
+		  		<div class="imagemMenuHam">
+		  			<label id="icone" for="check">
+		  				<img src="imagens/iconeHam.png" width="10%" height="10%">
+		  			</label>
+		  		</div>
+						
+			<nav class="menu">
+
+				<ul>
+
+			  		<li class="paddingExclusivo"><a href="#">HOME</a>		  		
+				  		<ul>
+				  			<li><a href="index.html#link1">Quem é a Mars?</a></li>
+				  			<li><a href="index.html#link2">Realidade dos EAD's</a></li>			
+				  			<li><a href="index.html#link3">Ter um curso agrega?</a></li>   			
+				  		</ul>		  		 		
+			  		</li>
+				  		
+			  		<li><a href="#">CURSOS</a>
+				  		
+				  		<ul>
+				  			<li><a href="arquitetura.html">Arquitetura Computadores</a></li>				  			
+				  			<li><a href="fundamentos.html">Fundamentos Web Design</a></li>
+				  			<li><a href="ingles.html">Inglês Instrumental</a></li>
+				  			<li><a href="logica.html">Lógica De Programação</a></li>
+				  			<li><a href="metodologia.html">Metodologia Científica</a></li>
+				  			<li><a href="sistemas.html">Sistemas Operacionais</a></li>	  			
+				  		</ul>
+			  		</li>	  		
+				  		
+			  		<li><a href="#">CONTATOS</a>
+				  		<ul>
+				  			<li><a href="contatos.html">Contatos</a></li>	  			
+				  		</ul>
+			  		</li>
+			  		
+			  		<li><a href="#">SOBRE NÓS</a>
+						<ul>
+				  			<li><a href="quemSomos.html">Quem somos?</a></li>
+				  			<li><a href="quemSomos.html#missao">Qual é a nossa missão?</a></li>	  			
+				  		</ul>
+			  		</li>
+
+			  	</ul>
+			</nav>
+		</div>
+		<!------------------------------------------------------------------------------>
+
+		<!-- Grupo do conteudo---------------------------------------------------------->
+		<section>
+			<div class="linha">
+				<div class="linha">
+					<div class="col-dm-12 col-dg-12">
+					<h2 class="tituloFormulario" style="color:white; background-color:#b70f00">Fundamentos Web Design</h2>
+				</div>
+				<div class="col-dm-2 col-dg-2"></div>
+				<div class="col-dm-8 col-dg-8">
+					<p>Responda com 60% de acerto para gerar seu certificado.</p><br>
+					<form action="">
+						<p>1 - Qual tag declara uma tabela em HTML?</p><br>
+						<label><input type="radio" name="questao1">tabela.</label><br>
+						<label><input type="radio" name="questao1">tablet.</label><br>
+						<label><input type="radio" name="questao1">table.</label><br>
+						<label><input type="radio" name="questao1">index.</label><br>
+						<br><br>
+						<p>2 - Entre qual tag uma tabela em HTML deve obrigatoriamente estar para ser exibida?</p><br>
+						<label><input type="radio" name="questao2">head.</label><br>
+						<label><input type="radio" name="questao2">footer.</label><br>
+						<label><input type="radio" name="questao2">body.</label><br>
+						<label><input type="radio" name="questao2">select.</label><br>
+						<br><br>
+						<p>3 - Como declarar uma linha em uma tabela HTML?</p><br>
+						<label><input type="radio" name="questao3">line.</label><br>
+						<label><input type="radio" name="questao3">row.</label><br>
+						<label><input type="radio" name="questao3">straight.<label><br>
+						<label><input type="radio" name="questao3">linha.</label><br>
+						<br><br>
+						<p>4 - O que define uma coluna em uma tabela HTML?</p><br>
+						<label><input type="radio" name="questao4">Uma célula.</label><br>
+						<label><input type="radio" name="questao4">Uma linha horizonta.</label><br>
+						<label><input type="radio" name="questao4">Um cabeçalho.</label><br>
+						<label><input type="radio" name="questao4">Uma linha vertical.</label><br>
+						<br><br>
+						<p>5 - Qual atributo define o estilo de borda de uma tabela em HTML?</p><br>
+						<label><input type="radio" name="questao5">edge.</label><br>
+						<label><input type="radio" name="questao5">limit.</label><br>
+						<label><input type="radio" name="questao5">border.</label><br>
+						<label><input type="radio" name="questao5">side.</label><br>
+						<br><br>
+						<p>6 - Os símbolos “<” e “>”, são chamados de?</p><br>
+						<label><input type="radio" name="questao6">Aspas.</label><br>
+						<label><input type="radio" name="questao6">Parenteses.<label><br>
+						<label><input type="radio" name="questao6">Parenteses Angulares.</label><br>
+						<label><input type="radio" name="questao6">Chaves.</label><br>
+						<br><br>
+						<p>7 - A tag "br" é utilizada para?</p><br>
+						<label><input type="radio" name="questao7">Definir o idioma da pagina como pt-br.</label><br>
+						<label><input type="radio" name="questao7">Definir um quebra temática em um parágrafo, pulando uma linha.</label><br>
+						<label><input type="radio" name="questao7">Definir a pagina como um site brasileiro.</label><br>
+						<label><input type="radio" name="questao7">Criar um link para outra página.</label><br>
+						<br><br>
+						<p>8 - Qual tag é utilizada para inserir uma linha horizontal para separar seções ou artigos em HTML?</p><br>
+						<label><input type="radio" name="questao8">line.</label><br>
+						<label><input type="radio" name="questao8">hr.</label><br>
+						<label><input type="radio" name="questao8">straight.</label><br>
+						<label><input type="radio" name="questao8">cut.</label><br>
+						<br><br>
+						<p>9 - Como manter a formatação de um texto a ser inserido em um código HTML?</p><br>
+						<label><input type="radio" name="questao9">format.</label><br>
+						<label><input type="radio" name="questao9">keep.</label><br>
+						<label><input type="radio" name="questao9">still.</label><br>
+						<label><input type="radio" name="questao9">pre.</label><br>
+						<br><br>
+						<p>10 - Qual atributo é utilizado na tag "img" para definir o endereço de uma imagem?</p><br>
+						<label><input type="radio" name="questao10">local.</label><br>
+						<label><input type="radio" name="questao10">src.</label><br>
+						<label><input type="radio" name="questao10">href.</label><br>
+						<label><input type="radio" name="questao10">source.</label><br>
+						
+						<br><input type="button" value="Conferir" onclick="armazenarResposta()">
+						<input type="reset" value="Limpar">
+					</form>
+				</div>
+				<div class="col-dm-2 col-dg-2"></div>
+			</div>
+		</section>
+		<!-- Grupo do footer------------------------------------------------------------>
+		<footer>
+			<div class="linha">
+				<div class="col-dm-4 col-dg-4 youtube">
+					<h3>Aonde estamos</h3>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1886.983476991275!2d-48.28086364898106!3d-18.932856802403823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a444e28f2d7a11%3A0x8fa16020966235f9!2sIFTM+Campus+Uberl%C3%A2ndia+Centro!5e0!3m2!1spt-BR!2sbr!4v1562459259135!5m2!1spt-BR!2sbr" width="200" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+				<div class="col-dm-4 col-dg-4">
+					<h3>Entre em contato</h3>
+					<div class="linha links">
+						<div class="linha">
+							<div class="col-dm-2 col-dg-2"></div>
+							<div class="col-dm-2 col-dg-2 imagemContato"><img src="imagens/facebook.png" alt="" width="40px"></div>
+							<div class="col-dm-8 col-dg-8" id="links"><a href="#">Facebook</a></div>
+						</div>
+						<div class="linha">
+							<div class="col-dm-2 col-dg-2"></div>
+							<div class="col-dm-2 col-dg-2 imagemContato"><img src="imagens/linkedin.png" alt="" width="40px"></div>
+							<div class="col-dm-8 col-dg-8" id="links"><a href="#">Linkedin</a></div>
+						</div>
+						<div class="linha">
+							<div class="col-dm-2 col-dg-2"></div>
+							<div class="col-dm-2 col-dg-2 imagemContato"><img src="imagens/whatsapp.png" alt="" width="40px"></div>
+							<div class="col-dm-8 col-dg-8" id="links"><a href="#">Whatsapp</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-dm-4 col-dg-4">
+					<h3 class="youtube">Inscreva-se</h3>
+					<script src="https://apis.google.com/js/platform.js"></script>
+					<div class="g-ytsubscribe" data-channelid="UCa61FXMYKD6OjYBJ2Zo3tQQ" data-layout="full" data-theme="dark" data-count="hidden"></div>
+				</div>
+				<div class="col-dm-12 col-dg-12 direitos">
+					<p>Todos os direitos reservados.</p>
+				</div>
+			</div>
+		</footer>
+		<!------------------------------------------------------------------------------>
+	</body>
+</html>

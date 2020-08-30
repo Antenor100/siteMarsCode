@@ -1,0 +1,73 @@
+.divConteudo{
+	margin: 0%; 
+	height: 100%;
+}
+
+.divTitulo{
+	height: 10%;
+	padding: 2% 0%;
+	background-color: #C3171B; 
+	font-size: 130%;
+}
+
+.divTitulo h2{
+	background-color: #C3171B; 
+	color: white;
+	font-family: lemon2;
+	text-align: center;
+}
+
+.divTitulo h2:hover{
+	letter-spacing: 15px;
+}
+
+.divTexto{
+
+}
+
+.divTexto p{
+	padding: 4% 5%;
+	font-family: lemon2;
+	text-align: justify;
+}
+
+.divImg{
+	text-align: center;
+	margin-bottom: 15%;
+}
+
+.imgArticle{
+	width: 92%;
+}
+
+.imgArticle:hover{
+	width: 97%;
+}
+
+@media screen and (min-width: 636px){
+	.divConteudo{
+		margin: 0% 12.5%;
+		padding: 1% 0%;
+	}
+
+	.imgArticle{
+		width: 75%;
+	}
+
+	.imgArticle:hover{
+		width: 80%;
+		box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+	}	
+}
+
+@media screen and (min-width: 1300px){
+	.divTexto p{
+		font-size: 140%;
+	}
+}
+
+hr{
+	display: block;
+	border:2px solid #C3171B;
+	margin-bottom: 5px;
+}
